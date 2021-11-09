@@ -53,7 +53,7 @@ def convert_number_to_persian(number):
                19: 'نوزده', 20: 'بیست',
                30: 'سی', 40: 'چهل', 50: 'پنجاه', 60: 'شصت',
                70: 'هفتاد', 80: 'هشتاد', 90: 'نود',
-               100: 'یکصد', 200: 'دویست', 300: 'سیصد', 400: 'چهارصد', 500: 'پنصد', 600: 'ششصد', 700: 'هفتصد',
+               100: 'یکصد', 200: 'دویست', 300: 'سیصد', 400: 'چهارصد', 500: 'پانصد', 600: 'ششصد', 700: 'هفتصد',
                800: 'هشتصد', 900: 'نهصد'}
 
     kilo = 1000
@@ -80,7 +80,7 @@ def convert_number_to_persian(number):
 
     if number < million:
         if number % kilo == 0:
-            return convert_number_to_persian(number // kilo) + ' هزاذ'
+            return convert_number_to_persian(number // kilo) + ' هزار'
         else:
             return convert_number_to_persian(number // kilo) + ' هزار ' + convert_number_to_persian(number % kilo)
 
